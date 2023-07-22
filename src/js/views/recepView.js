@@ -113,7 +113,6 @@ class RecipeView extends View {
     this._parentElement.addEventListener('click', function (e) {
       let bookmarkBtn = e.target.closest('.btn--round');
       if (!bookmarkBtn) return;
-      console.log(bookmarkBtn);
       handler();
     });
   }
