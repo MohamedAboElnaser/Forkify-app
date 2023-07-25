@@ -128,9 +128,9 @@ export const uploadRecipe = async function (newRecipe) {
       cooking_time: +newRecipe.cookingTime,
       ingrediants,
     };
-    console.log('recipe object ', recipe);
+    // console.log('recipe object ', recipe);
     let data = await setJSON(`${API_URL}?key=${KEY}`, recipe);
-    console.log('Data returned form the server', data);
+    // console.log('Data returned form the server', data);
     state.recipe = creatRecipeObject(data);
     addBookMark(state.recipe);
   } catch (err) {

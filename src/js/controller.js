@@ -104,7 +104,7 @@ const controlUploadRecipe = async function (newRecipe) {
     //close the form
     setTimeout(function () {
       addRecipeView.toggleWindo();
-      location.reload();
+      // location.reload();
     }, 2000);
   } catch (err) {
     console.error(err);

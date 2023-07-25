@@ -34,7 +34,7 @@ class AddRecipeView extends View {
 
       let dataArr = [...new FormData(this)];
       let data = Object.fromEntries(dataArr);
-      console.log('data from addhandelerUpload', data);
+      //console.log('data from addhandelerUpload', data);
       handeler(data);
     });
   }
