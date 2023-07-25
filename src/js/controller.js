@@ -104,13 +104,15 @@ const controlUploadRecipe = async function (newRecipe) {
     //close the form
     setTimeout(function () {
       addRecipeView.toggleWindo();
-      // location.reload();
+      location.reload();
     }, 2000);
   } catch (err) {
     console.error(err);
     addRecipeView.renderErrorMessage(err.message);
   }
 };
+
+//  
 //here we applay the concept of Publisher subscriber pattern
 // as at the beggining the recepView[Publisher] [do not know any thing about controller]
 // just it  listens to the events from DOM and handels it through
