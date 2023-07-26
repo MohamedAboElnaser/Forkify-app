@@ -20,7 +20,7 @@ const creatRecipeObject = function (data) {
     image: recipe.image_url,
     servings: recipe.servings,
     cookingTime: recipe.cooking_time,
-    ingrediants: recipe.ingredients,
+    ingredients: recipe.ingredients,
     ...(recipe.key && { key: recipe.key }),
   };
 };
@@ -67,7 +67,7 @@ export const getSearchResultPage = function (page = 1) {
 };
 
 export const updateServings = function (newServings) {
-  state.recipe.ingrediants.forEach(ing => {
+  state.recipe.ingredients.forEach(ing => {
     ing.quantity = (ing.quantity * newServings) / state.recipe.servings;
   });
 
@@ -105,7 +105,7 @@ loadBookmarskFromLocalStorage();
 
 export const uploadRecipe = async function (newRecipe) {
   try {
-    const ingrediants = Object.entries(newRecipe)
+    const ingredients = Object.entries(newRecipe)
       .filter(enti => {
         return enti[0].startsWith('ingredient') && enti[1] !== '';
       })
@@ -126,7 +126,7 @@ export const uploadRecipe = async function (newRecipe) {
       image_url: newRecipe.image,
       servings: +newRecipe.servings,
       cooking_time: +newRecipe.cookingTime,
-      ingrediants,
+      ingredients,
     };
     // console.log('recipe object ', recipe);
     let data = await setJSON(`${API_URL}?key=${KEY}`, recipe);

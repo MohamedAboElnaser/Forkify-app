@@ -28,7 +28,6 @@ export const setJSON = async function (url, reqBody) {
       },
       body: JSON.stringify(reqBody),
     });
-    // console.log('req Body: ', JSON.stringify(reqBody));
     let req = await Promise.race([fetchData, timeout(TIMEOUT_SECONDS)]);
     let data = await req.json();
 

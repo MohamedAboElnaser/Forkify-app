@@ -5,7 +5,6 @@ import resultView from './views/resultView.js';
 import bookmarksView from './views/bookmarksView.js';
 import paginationView from './views/paginationView.js';
 import addRecipeView from './views/addRecipeView.js';
-// https://forkify-api.herokuapp.com/v2
 
 ///////////////////////////////////////
 
@@ -112,7 +111,7 @@ const controlUploadRecipe = async function (newRecipe) {
   }
 };
 
-//  
+//
 //here we applay the concept of Publisher subscriber pattern
 // as at the beggining the recepView[Publisher] [do not know any thing about controller]
 // just it  listens to the events from DOM and handels it through
